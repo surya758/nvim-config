@@ -12,6 +12,14 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
+  {
+    'numToStr/Comment.nvim',
+    opts = {
+      -- add any options here
+    },
+    lazy = false,
+  },
+  { 'echasnovski/mini.nvim', version = '*' },
   'axelvc/template-string.nvim',
   { 'akinsho/toggleterm.nvim', version = '*', config = true },
   'windwp/nvim-ts-autotag',
@@ -74,3 +82,5 @@ require('p-lint')
 require('p-cmp')
 require('p-treesitter')
 require('p-term')
+require('p-indent')
+require('p-mini')
