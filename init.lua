@@ -14,6 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 require('lazy').setup({
   'fedepujol/move.nvim',
   'nvimdev/lspsaga.nvim',
+  'fedepujol/move.nvim',
   { 'lukas-reineke/indent-blankline.nvim', main = 'ibl', opts = {} },
   {
     'numToStr/Comment.nvim',

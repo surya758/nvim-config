@@ -3,6 +3,9 @@ require('lspsaga').setup({
   ui = {
     border = 'rounded',
   },
+  lightbulb = {
+    enable = false,
+  },
 })
 
 keymap.set('n', '[d', '<cmd>Lspsaga diagnostic_jump_prev<cr>')
