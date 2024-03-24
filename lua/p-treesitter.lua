@@ -8,6 +8,8 @@ require('nvim-treesitter.configs').setup({
     'json',
     'html',
     'css',
+    'markdown',
+    'markdown_inline',
   },
 
   sync_install = false,

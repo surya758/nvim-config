@@ -5,6 +5,12 @@ keymap.set('n', '<C-a>', 'ggVG')
 
 keymap.set({ 'n', 'x' }, '<leader>p', '"0p')
 
+-- Move the current visual selection up
+keymap.set('v', 'K', ":m '<-2<CR>gv=gv", { noremap = true })
+
+-- Move the current visual selection down
+keymap.set('v', 'J', ":m '>+1<CR>gv=gv", { noremap = true })
+
 keymap.set('n', '<c-h>', function()
   vim.o.hlsearch = not vim.o.hlsearch
 end, { desc = 'toggle search highlighting' })

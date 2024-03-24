@@ -20,4 +20,16 @@ vim.fn.sign_define({
     texthl = 'DiagnosticSignHint',
     linehl = 'HintLine',
   },
+  {
+    name = 'DiagnosticSignInfo',
+    text = '󰝄',
+    texthl = 'DiagnosticSignInfo',
+    linehl = 'InfoLine',
+  },
+  {
+    name = 'DiagnosticSignOk',
+    text = '󰝄',
+    texthl = 'DiagnosticSignOk',
+    linehl = 'OkLine',
+  },
 })
