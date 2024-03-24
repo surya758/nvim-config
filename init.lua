@@ -12,15 +12,43 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
+
+  {
+    'L3MON4D3/LuaSnip',
+    build = vim.fn.has('win32') ~= 0 and 'make install_jsregexp' or nil,
+    dependencies = {
+      'rafamadriz/friendly-snippets',
+      'benfowler/telescope-luasnip.nvim',
+    },
+    config = function(_, opts)
+      if opts then
+        require('luasnip').config.setup(opts)
+      end
+      vim.tbl_map(function(type)
+        require('luasnip.loaders.from_' .. type).lazy_load()
+      end, { 'vscode', 'snipmate', 'lua' })
+      -- friendly-snippets - enable standardized comments snippets
+      require('luasnip').filetype_extend('typescript', { 'tsdoc' })
+      require('luasnip').filetype_extend('javascript', { 'jsdoc' })
+      require('luasnip').filetype_extend('lua', { 'luadoc' })
+    end,
+  },
+  {
+    'folke/which-key.nvim',
+    event = 'VeryLazy',
+    init = function()
+      vim.o.timeout = true
+      vim.o.timeoutlen = 300
+    end,
+    opts = {},
+  },
   'fedepujol/move.nvim',
   'nvimdev/lspsaga.nvim',
   'fedepujol/move.nvim',
   { 'lukas-reineke/indent-blankline.nvim', main = 'ibl', opts = {} },
   {
     'numToStr/Comment.nvim',
-    opts = {
-      -- add any options here
-    },
+    opts = {},
     lazy = false,
   },
   {
