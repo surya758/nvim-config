@@ -12,12 +12,17 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
+  { 'lukas-reineke/indent-blankline.nvim', main = 'ibl', opts = {} },
   {
     'numToStr/Comment.nvim',
     opts = {
       -- add any options here
     },
     lazy = false,
+  },
+  {
+    'nvim-lualine/lualine.nvim',
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
   },
   { 'echasnovski/mini.nvim', version = '*' },
   'axelvc/template-string.nvim',
@@ -67,8 +72,6 @@ require('lazy').setup({
   'nvim-treesitter/nvim-treesitter',
 })
 
-vim.cmd('colorscheme catppuccin')
-
 require('base')
 require('keymap')
 require('p-mason')
@@ -84,3 +87,5 @@ require('p-treesitter')
 require('p-term')
 require('p-indent')
 require('p-mini')
+require('p-lualine')
+require('colors')
