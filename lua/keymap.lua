@@ -35,3 +35,23 @@ keymap.set('n', '<leader>x', '<cmd>x<cr>', { desc = 'Write And Quit' })
 
 keymap.set('n', 'j', [[v:count?'j':'gj']], { noremap = true, expr = true })
 keymap.set('n', 'k', [[v:count?'k':'gk']], { noremap = true, expr = true })
+
+-- harpoon
+vim.keymap.set(
+  'n',
+  '<leader>ha',
+  ":lua require('harpoon.mark').add_file()<CR>",
+  { desc = 'Harpoon Add File' }
+)
+vim.keymap.set(
+  'n',
+  '<leader>th',
+  ':Telescope harpoon marks<CR>',
+  { desc = 'Telescope Harpoon' }
+)
+vim.keymap.set(
+  'n',
+  '<leader>hh',
+  ':lua require("harpoon.ui").toggle_quick_menu()<CR>',
+  { desc = 'Harpoon Toggle Quick Menu' }
+)

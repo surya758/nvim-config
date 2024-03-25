@@ -1,4 +1,5 @@
 local builtin = require('telescope.builtin')
+require('telescope').load_extension('harpoon')
 local keymap = vim.keymap
 keymap.set(
   'n',

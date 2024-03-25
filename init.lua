@@ -12,6 +12,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
+  'ThePrimeagen/harpoon',
   {
     'folke/flash.nvim',
     event = 'VeryLazy',
@@ -25,7 +26,6 @@ require('lazy').setup({
     { "<c-s>", mode = { "c" }, function() require("flash").toggle() end, desc = "Toggle Flash Search" },
   },
   },
-  'Shatur/neovim-session-manager',
   'zbirenbaum/copilot-cmp',
   {
     'zbirenbaum/copilot.lua',
@@ -151,4 +151,3 @@ require('colors')
 require('p-fidget')
 require('p-bufferline')
 require('p-copilot')
-require('p-sessions')
