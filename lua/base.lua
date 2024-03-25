@@ -23,6 +23,7 @@ opt.smartcase = true
 opt.swapfile = false
 opt.autoread = true
 vim.bo.autoread = true
+vim.wo.signcolumn = 'yes:1'
 
 opt.cursorline = true
 opt.termguicolors = true

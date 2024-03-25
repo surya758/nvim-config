@@ -13,18 +13,18 @@ vim.api.nvim_create_autocmd('ColorScheme', {
 fixBufferLineSeparator()
 vim.keymap.set('n', '<S-l>', '<CMD>BufferLineCycleNext<CR>')
 vim.keymap.set('n', '<S-h>', '<CMD>BufferLineCyclePrev<CR>')
+vim.keymap.set('n', '<S-x>', '<CMD>BufferLinePickClose<CR>')
 
 require('bufferline').setup({
   options = {
     indicator = {
       style = 'icon',
-      icon = '', --'▎',
-      buffer_close_icon = ' ',
-      modified_icon = '●',
-      close_icon = ' ',
-      left_trunc_marker = '<-', --'',
-      right_trunc_marker = '->', --'',
+      icon = '▎', -- this should be omitted if indicator style is not 'icon'
     },
+    buffer_close_icon = '󰅖',
+    close_icon = '',
+    left_trunc_marker = '<-', --'',
+    right_trunc_marker = '->', --'',
     offsets = {
       {
         filetype = 'NvimTree',

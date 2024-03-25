@@ -1,4 +1,4 @@
-vim.g.catppuccin_diagnostic_line_highlight = 2
+vim.g.catppuccin_diagnostic_line_highlight = 1
 vim.cmd('colorscheme catppuccin')
 
 vim.fn.sign_define({
