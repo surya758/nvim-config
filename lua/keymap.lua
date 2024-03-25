@@ -29,9 +29,9 @@ keymap.set('n', '<leader>rl', function()
   vim.o.relativenumber = not vim.o.relativenumber
 end, { desc = 'Toggle Relative Number' })
 
-keymap.set('n', '<leader>q', '<cmd>q<cr>', { desc = 'Quit' })
+-- keymap.set('n', '<leader>q', '<cmd>q<cr>', { desc = 'Quit' })
 keymap.set('n', '<leader>w', '<cmd>w<cr>', { desc = 'Write' })
-keymap.set('n', '<leader>x', '<cmd>x<cr>', { desc = 'Write And Quit' })
+-- keymap.set('n', '<leader>x', '<cmd>x<cr>', { desc = 'Write And Quit' })
 
 keymap.set('n', 'j', [[v:count?'j':'gj']], { noremap = true, expr = true })
 keymap.set('n', 'k', [[v:count?'k':'gk']], { noremap = true, expr = true })

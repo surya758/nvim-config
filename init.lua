@@ -12,6 +12,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
+  'nvim-treesitter/nvim-treesitter-context',
   'ThePrimeagen/harpoon',
   {
     'folke/flash.nvim',
