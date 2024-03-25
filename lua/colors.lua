@@ -1,4 +1,4 @@
-vim.g.catppuccin_diagnostic_line_highlight = 1
+vim.g.catppuccin_diagnostic_line_highlight = 2
 vim.cmd('colorscheme catppuccin')
 
 vim.fn.sign_define({
@@ -22,13 +22,13 @@ vim.fn.sign_define({
   },
   {
     name = 'DiagnosticSignInfo',
-    text = '󰝄',
+    text = '',
     texthl = 'DiagnosticSignInfo',
     linehl = 'InfoLine',
   },
   {
     name = 'DiagnosticSignOk',
-    text = '󰝄',
+    text = '󰩐',
     texthl = 'DiagnosticSignOk',
     linehl = 'OkLine',
   },

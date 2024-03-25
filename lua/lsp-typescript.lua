@@ -1,8 +1,23 @@
 local keymap = vim.keymap
 
-keymap.set('n', '<leader>m', '<cmd>TSToolsSortImports<cr>')
-keymap.set('n', '<leader>mm', '<cmd>TSToolsOrganizeImports<cr>')
-keymap.set('n', '<leader>a', '<cmd>TSToolsAddMissingImports<cr>')
+keymap.set(
+  'n',
+  '<leader>ts',
+  '<cmd>TSToolsSortImports<cr>',
+  { desc = 'Sort Imports' }
+)
+keymap.set(
+  'n',
+  '<leader>to',
+  '<cmd>TSToolsOrganizeImports<cr>',
+  { desc = 'Organise Imports' }
+)
+keymap.set(
+  'n',
+  '<leader>ta',
+  '<cmd>TSToolsAddMissingImports<cr>',
+  { desc = 'Add Missing Imports' }
+)
 
 local api = require('typescript-tools.api')
 require('typescript-tools').setup({

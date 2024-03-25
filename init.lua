@@ -12,7 +12,21 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
-
+  'zbirenbaum/copilot-cmp',
+  {
+    'zbirenbaum/copilot.lua',
+    cmd = 'Copilot',
+    event = 'InsertEnter',
+  },
+  {
+    'akinsho/bufferline.nvim',
+    version = '*',
+    dependencies = 'nvim-tree/nvim-web-devicons',
+  },
+  {
+    'j-hui/fidget.nvim',
+    opts = {},
+  },
   {
     'L3MON4D3/LuaSnip',
     build = vim.fn.has('win32') ~= 0 and 'make install_jsregexp' or nil,
@@ -120,3 +134,6 @@ require('p-indent')
 require('p-mini')
 require('p-lualine')
 require('colors')
+require('p-fidget')
+require('p-bufferline')
+require('p-copilot')
