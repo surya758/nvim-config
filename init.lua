@@ -29,6 +29,10 @@ require('lazy').setup({
   },
   'zbirenbaum/copilot-cmp',
   {
+    'folke/todo-comments.nvim',
+    dependencies = { 'nvim-lua/plenary.nvim' },
+  },
+  {
     'zbirenbaum/copilot.lua',
     cmd = 'Copilot',
     event = 'InsertEnter',
@@ -152,3 +156,4 @@ require('colors')
 require('p-fidget')
 require('p-bufferline')
 require('p-copilot')
+require('p-comment')
