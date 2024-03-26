@@ -4,6 +4,12 @@ local keymap = vim.keymap
 keymap.set('n', '<C-a>', 'ggVG', { desc = 'Select Whole File Content' })
 
 keymap.set({ 'n', 'x' }, '<leader>p', '"0p', { desc = 'Absolute Copy' })
+keymap.set(
+  'n',
+  '<leader>qqq',
+  '<cmd>qa!<cr>',
+  { desc = 'Quit All Mercilessly!' }
+)
 -- Move the current visual selection up
 keymap.set(
   'v',
