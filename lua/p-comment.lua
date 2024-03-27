@@ -23,7 +23,7 @@ end, { desc = 'Previous todo comment' })
 
 vim.keymap.set(
   'n',
-  '<leader>t',
+  '<leader>tc',
   '<cmd>TodoTelescope<cr>',
   { desc = 'Telescope Todo Comments' }
 )

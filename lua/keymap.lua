@@ -26,6 +26,23 @@ keymap.set(
   { noremap = true, desc = 'Move Line/Block Down' }
 )
 
+-- Trouble keymaps
+vim.keymap.set('n', '<leader>xx', function()
+  require('trouble').toggle()
+end, { desc = 'Trouble Toggle' })
+vim.keymap.set('n', '<leader>xw', function()
+  require('trouble').toggle('workspace_diagnostics')
+end, { desc = 'Trouble Workspace Diagnostics' })
+vim.keymap.set('n', '<leader>xd', function()
+  require('trouble').toggle('document_diagnostics')
+end, { desc = 'Trouble Document Diagnostics' })
+vim.keymap.set('n', '<leader>xq', function()
+  require('trouble').toggle('quickfix')
+end, { desc = 'Trouble Quickfix' })
+vim.keymap.set('n', '<leader>xl', function()
+  require('trouble').toggle('loclist')
+end, { desc = 'Trouble Loclist' })
+
 keymap.set('n', '<c-h>', function()
   vim.o.hlsearch = not vim.o.hlsearch
 end, { desc = 'Toggle Search Highlighting' })

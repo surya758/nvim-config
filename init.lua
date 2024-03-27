@@ -10,7 +10,6 @@ if not vim.loop.fs_stat(lazypath) then
   })
 end
 vim.opt.rtp:prepend(lazypath)
-
 require('lazy').setup({
   'nvim-treesitter/nvim-treesitter-context',
   'ThePrimeagen/harpoon',
@@ -46,6 +45,7 @@ require('lazy').setup({
     'j-hui/fidget.nvim',
     opts = {},
   },
+  'folke/trouble.nvim',
   {
     'L3MON4D3/LuaSnip',
     build = vim.fn.has('win32') ~= 0 and 'make install_jsregexp' or nil,
@@ -104,7 +104,11 @@ require('lazy').setup({
 
   'L3MON4D3/LuaSnip',
   'saadparwaiz1/cmp_luasnip',
-  'WilliamHsieh/catppuccin.nvim',
+  {
+    'catppuccin/nvim',
+    name = 'catppuccin',
+    priority = 1000,
+  },
   {
     'pmizio/typescript-tools.nvim',
     dependencies = { 'nvim-lua/plenary.nvim', 'neovim/nvim-lspconfig' },
@@ -157,3 +161,4 @@ require('p-fidget')
 require('p-bufferline')
 require('p-copilot')
 require('p-comment')
+require('lsp-go')

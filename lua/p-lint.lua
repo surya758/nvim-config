@@ -7,6 +7,7 @@ lint.linters_by_ft = {
   javascript = { 'biomejs', 'eslint_d' },
   typescriptreact = { 'biomejs', 'eslint_d' },
   javascriptreact = { 'biomejs', 'eslint_d' },
+  go = { 'golangcilint' },
 }
 
 local eslint = lint.linters.eslint_d
